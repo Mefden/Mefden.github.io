@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<script src="apply/apply.js"></script>
+	<script src="getIncreasedNumFunction/getIncreasedNumFunction.js"></script>
 	<meta charset="UTF-8">
 	<title>hexl scripts dir</title>
 </head>
@@ -10,13 +11,30 @@
 <h2>For test</h2>
 <!-- apply js test -->
 <script>
+	console.log("------------------------------------apply js test------------------------------");
 	function tmpFunSum ()  {
 		return 10*10;
 	}
 	console.log(apply(0, Math.sqrt, 4));
 	console.log(apply(1, Math.sqrt, 4));
 	console.log(apply(1, tmpFunSum, 4));
+	console.log("------------------------------------apply js test END ------------------------------");
 </script>
-<!-- apply js test -->
+<!-- apply js test END -->
+<!-- getIncreasedNumFunction test -->
+<script>
+	console.log("------------------------------------getIncreasedNumFunction test------------------------------");
+	// num => num * multiplier;
+	const getIncreasedByTenTimes = getIncreasedNumFunction(10);
+	console.log(getIncreasedByTenTimes(5)); // 50
+	console.log(getIncreasedByTenTimes(14)); // 14 * 10 === 140
+
+	// num => num * multiplier;
+	const getIncreasedByHundredTimes = getIncreasedNumFunction(100);
+	console.log(getIncreasedByHundredTimes(5)); // 500
+	console.log(getIncreasedByHundredTimes(14)); // 14 * 100 === 1400
+	console.log("------------------------------------getIncreasedNumFunction test END------------------------------");
+</script>
+<!-- getIncreasedNumFunction test END -->
 </body>
 </html>

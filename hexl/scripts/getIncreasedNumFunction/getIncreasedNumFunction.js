@@ -1,0 +1,1 @@
+const getIncreasedNumFunction = multiplier => num => num * multiplier;
