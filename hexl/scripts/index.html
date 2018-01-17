@@ -4,18 +4,46 @@
 	<script src="apply/apply.js"></script>
 	<script src="getIncreasedNumFunction/getIncreasedNumFunction.js"></script>
 	<script src="flip/flip.js"></script>
+	<script src="partialApply/partialApply.js"></script>
 	<meta charset="UTF-8">
 	<title>hexl scripts dir</title>
 </head>
 <body>
 <h1>Hexl scripts directory...</h1>
 <h2>For test</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- TEMP Sandbox  -->
 <script>
 	console.log("------------------------------------ TEMP Sandbox test------------------------------");
-	const tmpf = f=>f;
-	console.log(tmpf(5+10+2));
-	console.log("------------------------------------ TEMP Sandbox END ------------------------------");
+	const tmpTrue = (a, b) => a;
+	const tmpFalse = (a,b) => b;
+	const tmif = f => param1=> param2=> f(param1, param2);
+	console.log(tmif(tmpTrue)('one')('two'));
+	console.log(tmif(tmpFalse)('one')('two'));
+		console.log("------------------------------------ TEMP Sandbox END ------------------------------");
 </script>
 <!-- TEMP Sandbox END -->
 
@@ -46,7 +74,7 @@
 	console.log("------------------------------------getIncreasedNumFunction test END------------------------------");
 </script>
 <!-- getIncreasedNumFunction test END -->
-<!-- getIncreasedNumFunction test -->
+<!-- FLIP test -->
 <script>
 	console.log("------------------------------------ FLIP test------------------------------");
 	// subtraction
@@ -66,7 +94,18 @@
 	console.log(wop(3, 2)); // 8
 
 	console.log("------------------------------------FLIP test END------------------------------");
+	</script>
+	<!-- FLIP TEST END -->
+	<!-- partialApply test -->
+<script>
+	console.log("------------------------------------partialApply test------------------------------");
+	const pow = (a, b) => a ** b;
+	const f1 = partialApply(pow, 2);
+	console.log(f1(1)); // => 2
+	console.log(f1(10)); // => 1024
+	console.log("------------------------------------partialApply test END ------------------------------");
 </script>
-<!-- getIncreasedNumFunction test END -->
+<!-- partialApply test END -->
+</script>
 </body>
 </html>
