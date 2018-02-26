@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+	const symmetricalPoint = (pointx, pointy) => {
+		const npointX = (pointx < 0)? -(pointx) : -pointx;
+		const npointY = (pointy < 0)? -(pointy) : -pointy;
+		console.log("X was " + pointx + "Xnow = " + npointX);
+		console.log("Y was " + pointy + "Ynow = " + npointY);
+		return 0;
+	}
+
+	symmetricalPoint (10 , 10);
+	symmetricalPoint (-10 , -10);
+
+</script>
+</body>
+</html>
